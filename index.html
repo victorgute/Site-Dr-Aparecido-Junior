@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/logo-dourado.png" type="image/x-icon" />
+    <title>Dr. Aparecido Bernardo Ribeiro Junior - Advocacia</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter (para sans-serif) e Playfair Display (para serif) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="font-inter text-text-gray">
+    <!-- Cabeçalho Fixo (Header) -->
+    <header class="fixed w-full bg-dark-blue bg-opacity-90 shadow-lg z-50 py-4">
+      <nav
+        class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8"
+      >
+        <!-- Logotipo -->
+        <a
+          href="#inicio"
+          class="text-white text-2xl font-playfair font-bold flex items-center"
+        >
+          <span class="text-gold text-3xl mr-2 logo"
+            ><img src="img/logo-transparente.png" alt=""
+          /></span>
+        </a>
+
+        <!-- Menu de Navegação -->
+        <ul class="hidden md:flex space-x-8">
+          <li>
+            <a
+              href="#inicio"
+              class="text-white hover:text-gold transition duration-300"
+              >Início</a
+            >
+          </li>
+          <li>
+            <a
+              href="#atuacao"
+              class="text-white hover:text-gold transition duration-300"
+              >Áreas de Atuação</a
+            >
+          </li>
+          <li>
+            <a
+              href="#sobre"
+              class="text-white hover:text-gold transition duration-300"
+              >Sobre</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contato"
+              class="text-white hover:text-gold transition duration-300"
+              >Contato</a
+            >
+          </li>
+        </ul>
+
+        <!-- Botão em Destaque -->
+        <a
+          href="#contato"
+          class="bg-gold text-dark-blue px-6 py-2 rounded-full font-semibold hover:bg-white hover:text-dark-blue transition duration-300 shadow-md hidden md:block"
+        >
+          Agende sua Consulta
+        </a>
+
+        <!-- Mobile Menu Button (Hamburger) -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-white focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu (Hidden by default) -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-dark-blue bg-opacity-95 py-4"
+      >
+        <ul class="flex flex-col items-center space-y-4">
+          <li>
+            <a
+              href="#inicio"
+              class="text-white hover:text-gold transition duration-300 py-2 block"
+              onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+              >Início</a
+            >
+          </li>
+          <li>
+            <a
+              href="#atuacao"
+              class="text-white hover:text-gold transition duration-300 py-2 block"
+              onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+              >Áreas de Atuação</a
+            >
+          </li>
+          <li>
+            <a
+              href="#sobre"
+              class="text-white hover:text-gold transition duration-300 py-2 block"
+              onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+              >Sobre</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contato"
+              class="text-white hover:text-gold transition duration-300 py-2 block"
+              onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+              >Contato</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contato"
+              class="bg-gold text-dark-blue px-6 py-2 rounded-full font-semibold hover:bg-white hover:text-dark-blue transition duration-300 shadow-md"
+              onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+            >
+              Agende sua Consulta
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Hero Section (Primeira Dobra) -->
+    <section
+      id="inicio"
+      class="hero-bg-overlay h-screen flex items-center justify-center text-center text-white pt-20"
+    >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h1
+          class="text-4xl sm:text-5xl lg:text-6xl font-playfair font-bold text-gold mb-4 animate-fade-in-up"
+        >
+          Dr. Aparecido Bernardo Ribeiro Junior
+        </h1>
+        <p
+          class="text-xl sm:text-2xl lg:text-3xl font-inter mb-6 animate-fade-in-up delay-100"
+        >
+          Especialista em Direito Civil e Empresarial
+        </p>
+        <p
+          class="text-2xl sm:text-3xl lg:text-4xl font-playfair italic mb-8 animate-fade-in-up delay-200"
+        >
+          “Comprometido com a sua justiça.”
+        </p>
+        <!-- Foto do Advogado (Placeholder) -->
+        <div class="mb-8 animate-fade-in-up delay-300">
+          <img
+            src="img/junior-ia.png"
+            alt="Foto do Dr. Aparecido Bernardo Ribeiro Junior"
+            class="rounded-full w-40 h-40 mx-auto border-4 border-gold shadow-lg object-cover"
+          />
+        </div>
+        <!-- Botão WhatsApp -->
+        <a
+          href="https://wa.me/5511999999999"
+          target="_blank"
+          class="inline-flex items-center bg-gold text-dark-blue px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-dark-blue transition duration-300 shadow-xl animate-fade-in-up delay-400"
+        >
+          <i data-lucide="whatsapp" class="w-6 h-6 mr-3"></i> Fale Agora pelo
+          WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- Seção: Áreas de Atuação -->
+    <section id="atuacao" class="py-16 sm:py-20 bg-light-gray">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2
+          class="text-3xl sm:text-4xl font-playfair font-bold text-dark-blue mb-12"
+        >
+          Áreas de Atuação
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1: Direito Civil -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+          >
+            <i data-lucide="scale" class="w-16 h-16 text-gold mx-auto mb-6"></i>
+            <h3 class="text-xl font-playfair font-semibold text-dark-blue mb-4">
+              Direito Civil
+            </h3>
+            <p class="text-text-gray leading-relaxed">
+              Assessoria completa em questões contratuais, família, sucessões e
+              responsabilidade civil, garantindo seus direitos.
+            </p>
+          </div>
+          <!-- Card 2: Direito Empresarial -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+          >
+            <i
+              data-lucide="briefcase"
+              class="w-16 h-16 text-gold mx-auto mb-6"
+            ></i>
+            <h3 class="text-xl font-playfair font-semibold text-dark-blue mb-4">
+              Direito Empresarial
+            </h3>
+            <p class="text-text-gray leading-relaxed">
+              Orientação jurídica estratégica para empresas, desde a
+              constituição até fusões, aquisições e litígios comerciais.
+            </p>
+          </div>
+          <!-- Card 3: Direito do Trabalho -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+          >
+            <i data-lucide="users" class="w-16 h-16 text-gold mx-auto mb-6"></i>
+            <h3 class="text-xl font-playfair font-semibold text-dark-blue mb-4">
+              Direito do Trabalho
+            </h3>
+            <p class="text-text-gray leading-relaxed">
+              Defesa dos direitos de empregados e empregadores, com foco em
+              soluções eficientes e justas para conflitos.
+            </p>
+          </div>
+          <!-- Card 4 (Exemplo Adicional): Direito Imobiliário -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 lg:col-start-2"
+          >
+            <i data-lucide="home" class="w-16 h-16 text-gold mx-auto mb-6"></i>
+            <h3 class="text-xl font-playfair font-semibold text-dark-blue mb-4">
+              Direito Imobiliário
+            </h3>
+            <p class="text-text-gray leading-relaxed">
+              Assessoria em compra, venda, locação e regularização de imóveis,
+              garantindo segurança jurídica.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: Sobre o Dr. Aparecido -->
+    <section id="sobre" class="py-16 sm:py-20 bg-white">
+      <div
+        class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12"
+      >
+        <!-- Foto do Advogado -->
+        <div class="lg:w-1/3 flex justify-center">
+          <img
+            src="img/junior-inteiro-ia.png"
+            alt="Dr. Aparecido Bernardo Ribeiro Junior"
+            class="rounded-lg shadow-xl w-full max-w-sm object-cover"
+          />
+        </div>
+        <!-- Texto Biográfico -->
+        <div class="lg:w-2/3 text-center lg:text-left">
+          <h2
+            class="text-3xl sm:text-4xl font-playfair font-bold text-dark-blue mb-6"
+          >
+            Sobre o Dr. Aparecido
+          </h2>
+          <p class="text-text-gray leading-relaxed mb-4">
+            Com
+            <span class="font-bold text-gold"
+              >mais de 15 anos de experiência</span
+            >
+            no campo jurídico, o Dr. Aparecido Bernardo Ribeiro Junior é
+            reconhecido pela sua atuação dedicada e estratégica. Com
+            especialização em Direito Civil e Empresarial, construiu uma sólida
+            reputação baseada em ética, excelência e busca incansável pelos
+            melhores resultados para seus clientes.
+          </p>
+          <p class="text-text-gray leading-relaxed mb-4">
+            Seu compromisso vai além do aspecto legal, buscando entender as
+            necessidades individuais de cada caso para oferecer soluções
+            personalizadas e eficazes. A paixão pela justiça e a busca por
+            <span class="font-bold text-gold">resultados comprovados</span> são
+            os pilares de sua prática.
+          </p>
+          <p class="text-text-gray leading-relaxed">
+            Atuando com seriedade e transparência, o
+            <span class="font-bold text-gold">Dr. Aparecido</span> oferece um
+            serviço jurídico de alto padrão, focado na resolução de conflitos e
+            na proteção dos interesses de seus clientes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: Depoimentos -->
+<section id="depoimentos" class="px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-center font-playfair text-gold mb-12">O que dizem nossos clientes</h2>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div class="card-depoimento depoimento-item bg-white p-6 rounded-2xl shadow-lg">
+        <svg class="w-8 h-8 mb-4 fill-gold" viewBox="0 0 24 24">
+          <path d="M7.17 6A4.17 4.17 0 003 10.17V18h6v-7.83A4.17 4.17 0 007.17 6zm9.66 0A4.17 4.17 0 0012.66 10.17V18h6v-7.83A4.17 4.17 0 0016.83 6z"/>
+        </svg>
+        <p class="text-lg leading-relaxed mb-4">“Profissional excelente! Sempre disponível, atencioso e muito comprometido com a causa. Recomendo de olhos fechados.”</p>
+        <p class="font-semibold text-right text-gold">— Marcelo Machado</p>
+      </div>
+
+      <div class="card-depoimento depoimento-item bg-white p-6 rounded-2xl shadow-lg">
+        <svg class="w-8 h-8 mb-4 fill-gold" viewBox="0 0 24 24">
+          <path d="M7.17 6A4.17 4.17 0 003 10.17V18h6v-7.83A4.17 4.17 0 007.17 6zm9.66 0A4.17 4.17 0 0012.66 10.17V18h6v-7.83A4.17 4.17 0 0016.83 6z"/>
+        </svg>
+        <p class="text-lg leading-relaxed mb-4">“Atendimento de qualidade, muito conhecimento técnico e empatia durante todo o processo. Voltarei a contratar com certeza!”</p>
+        <p class="font-semibold text-right text-gold">— Ana Paula</p>
+      </div>
+
+      <div class="card-depoimento depoimento-item bg-white p-6 rounded-2xl shadow-lg">
+        <svg class="w-8 h-8 mb-4 fill-gold" viewBox="0 0 24 24">
+          <path d="M7.17 6A4.17 4.17 0 003 10.17V18h6v-7.83A4.17 4.17 0 007.17 6zm9.66 0A4.17 4.17 0 0012.66 10.17V18h6v-7.83A4.17 4.17 0 0016.83 6z"/>
+        </svg>
+        <p class="text-lg leading-relaxed mb-4">“Ótima experiência. Tirou todas as minhas dúvidas, me orientou com clareza e resolveu meu problema de forma rápida e eficaz.”</p>
+        <p class="font-semibold text-right text-gold">— João Ricardo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="py-16 sm:py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2
+          class="text-3xl sm:text-4xl font-playfair font-bold text-dark-blue mb-12"
+        >
+          Entre em Contato
+        </h2>
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+          <!-- Formulário de Contato -->
+          <div class="lg:w-1/2 w-full bg-light-gray p-8 rounded-lg shadow-lg">
+            <h3
+              class="text-2xl font-playfair font-semibold text-dark-blue mb-6"
+            >
+              Envie sua Mensagem
+            </h3>
+            <form class="space-y-6">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Seu Nome"
+                  class="w-full p-3 rounded-md border border-gray-300 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition duration-200"
+                  required
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder="Seu E-mail"
+                  class="w-full p-3 rounded-md border border-gray-300 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition duration-200"
+                  required
+                />
+              </div>
+              <div>
+                <textarea
+                  placeholder="Sua Mensagem"
+                  rows="6"
+                  class="w-full p-3 rounded-md border border-gray-300 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition duration-200"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-gold text-dark-blue px-6 py-3 rounded-full font-semibold hover:bg-dark-blue hover:text-white transition duration-300 shadow-md"
+              >
+                Enviar Mensagem
+              </button>
+            </form>
+          </div>
+
+          <!-- Informações de Contato e Mapa -->
+          <div
+            class="lg:w-1/2 w-full flex flex-col items-center lg:items-start space-y-8"
+          >
+            <!-- Botão WhatsApp -->
+            <a
+              href="https://wa.me/5511999999999"
+              target="_blank"
+              class="inline-flex items-center bg-dark-blue text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gold hover:text-dark-blue transition duration-300 shadow-xl"
+            >
+              <i data-lucide="message-circle-more" class="w-6 h-6 mr-3"></i>
+              Clique aqui e fale direto com o Dr. Aparecido
+            </a>
+            <!-- Endereço e Telefone -->
+            <div class="text-center lg:text-left">
+              <h3
+                class="text-2xl font-playfair font-semibold text-dark-blue mb-4"
+              >
+                Nosso Escritório
+              </h3>
+              <p
+                class="text-text-gray mb-2 flex items-center justify-center lg:justify-start"
+              >
+                <i data-lucide="map-pin" class="w-5 h-5 text-gold mr-2"></i> Rua
+                Exemplo, 123 - Centro, São Paulo - SP
+              </p>
+              <p
+                class="text-text-gray flex items-center justify-center lg:justify-start"
+              >
+                <i data-lucide="phone" class="w-5 h-5 text-gold mr-2"></i> (11)
+                99999-9999
+              </p>
+            </div>
+            <!-- Mapa (Placeholder) -->
+            <div
+              class="w-full h-64 bg-gray-200 rounded-lg shadow-lg overflow-hidden"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.060167909379!2d-46.6333094844391!3d-23.55928736737562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c892b1a1c7%3A0x8f2a5b6f7a6a7c8!2sAv.%20Paulista%2C%201578%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-200!5e0!3m2!1spt-BR!2sbr!4v1678901234567!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark-blue text-white py-10">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mb-6"
+        >
+          <!-- Links Rápidos -->
+          <ul class="flex space-x-6 mb-4 md:mb-0">
+            <li>
+              <a href="#inicio" class="hover:text-gold transition duration-300"
+                >Início</a
+              >
+            </li>
+            <li>
+              <a href="#sobre" class="hover:text-gold transition duration-300"
+                >Sobre</a
+              >
+            </li>
+            <li>
+              <a href="#contato" class="hover:text-gold transition duration-300"
+                >Contato</a
+              >
+            </li>
+          </ul>
+
+          <!-- Redes Sociais -->
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="text-white hover:text-gold transition duration-300"
+              aria-label="LinkedIn"
+            >
+              <i data-lucide="linkedin" class="w-6 h-6"></i>
+            </a>
+            <a
+              href="#"
+              class="text-white hover:text-gold transition duration-300"
+              aria-label="Instagram"
+            >
+              <i data-lucide="instagram" class="w-6 h-6"></i>
+            </a>
+            <a
+              href="#"
+              class="text-white hover:text-gold transition duration-300"
+              aria-label="Facebook"
+            >
+              <i data-lucide="facebook" class="w-6 h-6"></i>
+            </a>
+          </div>
+        </div>
+
+        <p class="text-sm mb-2">Rua Exemplo, 123 - Centro, São Paulo - SP</p>
+        <p class="text-sm mb-2">CNPJ: XX.XXX.XXX/XXXX-XX</p>
+        <p class="text-sm">
+          &copy; 2025 Dr. Aparecido Bernardo Ribeiro Junior. Todos os direitos
+          reservados.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

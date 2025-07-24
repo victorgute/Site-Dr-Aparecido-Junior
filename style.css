@@ -1,0 +1,167 @@
+/* Cores personalizadas para Tailwind */
+:root {
+  --color-dark-blue: #0a192f; /* Azul Escuro */
+  --color-gold: #d4af37; /* Dourado */
+  --color-light-gray: #f5f5f5; /* Cinza Claro */
+  --color-text-gray: #4a4a4a; /* Cinza para texto */
+}
+
+.hidden :hover {
+  color: var(--color-gold);
+}
+
+.font-playfair {
+  font-family: "Playfair Display", serif;
+}
+
+.text-4xl :hover {
+  transform: scale(1.1);
+}
+
+.subir :hover {
+  transform: scale(1.1);
+}
+
+.text-dark-blue {
+  color: #002147;
+}
+
+.bg-light-gray {
+  background-color: #f5f5f5;
+}
+
+.text-gold {
+  color: #ffd700;
+}
+
+.fill-gold {
+  fill: #ffd700;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Estilos para a animação de fade in e fade out por scroll */
+.depoimento-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.depoimento-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Adiciona um atraso para os elementos aparecerem em cascata */
+.depoimento-item:nth-child(2) { transition-delay: 0.2s; }
+.depoimento-item:nth-child(3) { transition-delay: 0.4s; }
+
+/* Mantenha os estilos de hover que você já tinha */
+.card-depoimento {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card-depoimento:hover {
+    transform: translateY(-8px) scale(1.02); /* Corrigi a escala para 1.02, já que a original estava em 1, que não faz nada */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Estilos para a animação de entrada */
+.animation-target {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Estilo para a animação de saída/retorno */
+.animation-target.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Os atrasos de animação podem ser aplicados assim */
+.animation-target:nth-child(2) {
+    transition-delay: 0.2s;
+}
+.animation-target:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.bg-dark-blue {
+  background-color: var(--color-dark-blue);
+}
+.text-dark-blue {
+  color: var(--color-dark-blue);
+}
+.border-dark-blue {
+  border-color: var(--color-dark-blue);
+}
+
+.bg-gold {
+  background-color: var(--color-gold);
+}
+.text-gold {
+  color: var(--color-gold);
+}
+.border-gold {
+  border-color: var(--color-gold);
+}
+
+.bg-light-gray {
+  background-color: var(--color-light-gray);
+}
+.text-light-gray {
+  color: var(--color-light-gray);
+}
+
+.text-text-gray {
+  color: var(--color-text-gray);
+}
+
+/* Fontes personalizadas */
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+.font-playfair {
+  font-family: "Playfair Display", serif;
+}
+
+/* Estilos para rolagem suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero section background overlay */
+.hero-bg-overlay {
+  background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.7)),
+    url("img/imagem-fundo.png") center/cover no-repeat fixed;
+}
+
+/* Carousel navigation (basic for static cards) */
+.carousel-container {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+}
+
+.logo img {
+  width: 250px;
+}
+
+.carousel-item {
+  scroll-snap-align: start;
+  flex: 0 0 auto; /* Prevent items from shrinking */
+}
