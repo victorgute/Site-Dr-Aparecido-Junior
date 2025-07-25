@@ -18,6 +18,7 @@
   font-family: "Playfair Display", serif;
 }
 
+
 .text-4xl :hover {
   transform: scale(1.1);
 }
@@ -162,10 +163,17 @@ html {
 }
 
 .logo img {
-  width: 100px;
+  width: 170px;
 }
 
 .carousel-item {
   scroll-snap-align: start;
   flex: 0 0 auto; /* Prevent items from shrinking */
+}
+
+
+@media (max-width: 400px) {
+  .media{
+    width: 100px;
+  }
 }
